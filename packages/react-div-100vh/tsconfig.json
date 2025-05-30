@@ -3,5 +3,12 @@
   "compilerOptions": {
     "rootDir": "src"
   },
-  "files": ["src/index.tsx"]
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": [
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/__tests__/**",
+    "**/dist/**",
+    "**/node_modules/**"
+  ]
 }
