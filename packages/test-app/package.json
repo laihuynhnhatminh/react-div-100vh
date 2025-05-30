@@ -10,12 +10,12 @@
     "serve": "npx serve dist"
   },
   "dependencies": {
-    "parcel-bundler": "^1.12.4",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
+    "parcel": "^2.0.0",
+    "react": "19",
+    "react-dom": "19",
     "react-div-100vh": "*"
   },
   "devDependencies": {
-    "serve": "^11.3.2"
+    "serve": "^14.2.4"
   }
 }

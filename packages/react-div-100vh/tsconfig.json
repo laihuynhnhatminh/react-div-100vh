@@ -3,5 +3,5 @@
   "compilerOptions": {
     "rootDir": "src"
   },
-  "files": ["src/index.tsx"]
+  "files": ["src/index.tsx", "**/*.test.ts", "**/*.test.tsx"]
 }

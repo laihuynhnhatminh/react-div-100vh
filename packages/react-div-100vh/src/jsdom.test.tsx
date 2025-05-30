@@ -1,21 +1,28 @@
-/**
- * @jest-environment jsdom
- */
-
 import React, { useRef, useState } from 'react'
-import { render, unmountComponentAtNode } from 'react-dom'
+import { createRoot } from 'react-dom/client'
+import { act } from 'react'
 import Div100vh from '.'
-import { act } from 'react-dom/test-utils'
 
 let container: HTMLDivElement | null
+let root: ReturnType<typeof createRoot> | null
+
 beforeEach(() => {
   container = document.createElement('div')
   document.body.appendChild(container)
+  root = createRoot(container)
 })
 
 afterEach(() => {
-  container && document.body.removeChild(container)
+  if (root) {
+    act(() => {
+      root!.unmount()
+    })
+  }
+  if (container) {
+    document.body.removeChild(container)
+  }
   container = null
+  root = null
 })
 
 it('passes JSDOM environment sanity check', () => {
@@ -36,7 +43,7 @@ describe('Div100vh component', () => {
     }
 
     act(() => {
-      render(<TestApp />, container)
+      root!.render(<TestApp />)
     })
 
     // To make sure that provoking extra rendering works
@@ -50,7 +57,7 @@ describe('Div100vh component', () => {
 
     // Making sure un-mounting happens also just once
     act(() => {
-      container && unmountComponentAtNode(container)
+      root!.unmount()
     })
     const resizeListenerUnmountCalls = removeListenerSpy.mock.calls.filter(
       (args) => args[0] === 'resize'
@@ -78,7 +85,7 @@ describe('Div100vh component', () => {
       )
     }
     act(() => {
-      render(<TestApp />, container)
+      root!.render(<TestApp />)
     })
 
     const divElement = container?.querySelector('[data-test]')

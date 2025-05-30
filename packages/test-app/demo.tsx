@@ -8,7 +8,7 @@ const style = {
   overflow: 'hidden'
 } as const
 
-export function Demo(): JSX.Element {
+export function Demo(): React.ReactElement {
   const [divType, setDivType] = useDivType()
   const DivComponent = divType === 'Div100vh' ? Div100vh : RegularDiv
   return (
