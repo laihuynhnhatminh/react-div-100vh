@@ -1,6 +1,6 @@
 {
-  "name": "react-div-100vh",
-  "version": "0.7.0",
+  "name": "himemiya-react-div-100vh",
+  "version": "0.7.1",
   "description": "A workaround for the '100vh' issue in mobile browsers",
   "license": "MIT",
   "main": "dist/cjs/index.js",
@@ -39,11 +39,11 @@
     "ts-node": "^10",
     "typescript": "^5"
   },
-  "author": "Mikhail Vasin",
+  "author": "Lai Huynh Nhat Minh",
   "homepage": "https://github.com/mvasin/react-div-100vh",
   "repository": {
     "type": "git",
-    "url": "git@github.com:mvasin/react-div-100vh.git",
+    "url": "https://github.com/mvasin/react-div-100vh.git",
     "directory": "packages/react-div-100vh"
   },
   "standard-version": {
