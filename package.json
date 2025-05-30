@@ -1,7 +1,8 @@
 {
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/react-div-100vh",
+    "packages/test-app"
   ],
   "scripts": {
     "test": "jest --config .jestrc.json",

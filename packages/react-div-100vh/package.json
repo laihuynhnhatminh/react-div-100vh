@@ -1,5 +1,5 @@
 {
-  "name": "himemiya-react-div-100vh",
+  "name": "react-div-100vh",
   "version": "0.7.1",
   "description": "A workaround for the '100vh' issue in mobile browsers",
   "license": "MIT",
@@ -11,7 +11,7 @@
     "build:esm": "yarn tsc -p tsconfig-esm.json",
     "build:cjs": "yarn tsc -p tsconfig-cjs.json",
     "build:types": "yarn tsc -p tsconfig-types.json",
-    "cleanup": "rm -rf dist",
+    "cleanup": "rimraf dist",
     "build": "yarn cleanup && yarn concurrently --kill-others-on-fail 'yarn:build:*'",
     "release": "standard-version",
     "prepublishOnly": "yarn build"
@@ -34,6 +34,7 @@
     "prettier": "^3",
     "react": "19",
     "react-dom": "19",
+    "rimraf": "6.0.1",
     "standard-version": "^9.5.0",
     "ts-jest": "^29",
     "ts-node": "^10",
