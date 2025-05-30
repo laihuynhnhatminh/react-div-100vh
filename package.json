@@ -10,7 +10,7 @@
     "prettier:check": "prettier --check .",
     "prettier:write": "prettier --write .",
     "build": "yarn workspace test-app build",
-    "prebuild": "yarn workspace react-div-100vh build",
+    "prebuild": "yarn workspace @himemiya/react-div-100vh build",
     "serve": "yarn workspace test-app serve"
   },
   "devDependencies": {

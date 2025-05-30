@@ -1,5 +1,8 @@
 {
-  "name": "react-div-100vh",
+  "name": "@himemiya/react-div-100vh",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "version": "0.7.1",
   "description": "A workaround for the '100vh' issue in mobile browsers",
   "license": "MIT",
